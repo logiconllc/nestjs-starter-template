@@ -1,0 +1,77 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  id: String!
+  name: String
+  email: String!
+  otp: String
+  otpExpiry: DateTime
+  password: String
+  invite: String
+  status: String!
+  role: String!
+  walletAddress: String
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type TokenType {
+  id: String
+  jwt: String
+}
+
+type ResponsePayload {
+  status: Float
+  message: String
+  data: User
+}
+
+type ResponsePayloadBool {
+  status: Float
+  message: String
+  data: Boolean
+}
+
+type Query {
+  userData: String!
+}
+
+type Mutation {
+  userCreation(createUserInputDTO: CreateUserInputDTO!): ResponsePayload!
+  userVerification(OtpVerificationDTO: OtpVerificationDTO!): ResponsePayloadBool!
+  partnerSignup(PartnerSignUpDTO: PartnerSignUpDTO!): ResponsePayload!
+  appUserSignUp(SignupAppUserDTO: SignupAppUserDTO!): ResponsePayload!
+  login(loginPayloadDTO: LoginPayloadDTO!): TokenType!
+}
+
+input CreateUserInputDTO {
+  email: String!
+  role: String!
+}
+
+input OtpVerificationDTO {
+  email: String!
+  otp: String!
+}
+
+input PartnerSignUpDTO {
+  email: String!
+  name: String!
+  newPassword: String!
+}
+
+input SignupAppUserDTO {
+  email: String!
+  role: String!
+  password: String!
+}
+
+input LoginPayloadDTO {
+  email: String!
+  password: String!
+}
