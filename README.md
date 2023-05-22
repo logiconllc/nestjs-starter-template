@@ -1,6 +1,6 @@
 
 ## Description
-< ADD DESCRIPTION > 
+< ADD PROJECT DESCRIPTION > 
 ## Installation
 
 ```bash
