@@ -1,19 +1,33 @@
 
-## Description
-< ADD PROJECT DESCRIPTION > 
+# Description
+
+<PROJECT DESCRIPTION>
+
+## Repo Information
+
+- Nest.js
+- GrahpQL (code basis)
+- Additionals
+-- Logging Interceptor (for both REST & GraphQL)
+-- Custom GrahQL Response formatter (no stacktrace in prod)
+-- Custom GraphQL Error (for proper GraphQL Exception handling)
+
 ## Installation
 
 ```bash
-$ npm install
+npm install
 ```
+
 ## Database Migrations & Seeders
+
 Migrations have their own database configurations in `src/config` folder
+
 ```bash
 # Create a migration 
 npm run migration:generate src/migrations/<MIGRATION_NAME>
 # Run Migrations
 npm run migration:run
-
+```
 
 ## Running the app
 
@@ -28,22 +42,7 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## 🚀 About Me
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+> Built with ❤️ by @logiconllc
+<https://logicon.tech>
